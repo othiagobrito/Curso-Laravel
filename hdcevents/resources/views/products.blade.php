@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('.layouts.main')
+
+@section('title', 'Produtos')
+
+@section('content')
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,3 +16,4 @@
         <h1>Tela de produtos</h1>
     </body>
 </html>
+@endsection
