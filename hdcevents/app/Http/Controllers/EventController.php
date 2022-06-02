@@ -11,11 +11,11 @@ class EventController extends Controller
     public function index() {
         $events = Event::all();
     
-        return view('welcome', ["events" => $events]);   
+        return view('welcome', ['events' => $events]);   
     }
 
     public function create() {
-        return view("events.create");
+        return view('events.create');
     }
 
     public function contact() {
@@ -26,6 +26,7 @@ class EventController extends Controller
         $event = new Event;
 
         $event->title = $request->title;
+        $event->date = $request->date;
         $event->city = $request->city;
         $event->private = $request->private;
         $event->description = $request->description;
